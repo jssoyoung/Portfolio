@@ -1,0 +1,183 @@
+/* color scheme sourced from http://khroma.co/generator/ */
+:root {
+    --periwinkle-gray: #aec6e0;
+    --steel-blue: #538eb8;
+    --bismark: #4a6a86;
+}
+
+/* Global styles */
+html, body {
+    background-color: var(--periwinkle-gray);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Navation/Header */
+h1 {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    padding: 1rem; 
+    justify-content: space-between;
+    background-color: var(--steel-blue);
+}
+
+nav h1 {
+    color: white;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+nav ul li {
+    padding: 5px 10px;
+}
+
+nav ul li a{
+    color: white;
+}
+
+/* Title */
+h2 {
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    padding: 0.75rem;
+}
+
+/* Shared section styles */
+section {
+    padding: 2.2rem;
+  }
+
+p {
+    padding-left: 3%;
+    font-size: 20px;
+}
+
+#about, #contact, #projects {
+    min-height: 200px;
+    min-width: 500px;
+    padding: 1rem;
+}
+
+/* main section */
+h3 {
+    font-size: 28px;
+    color: black;
+    padding: 2%;
+}
+
+.about img {
+    justify-content: flex;
+    padding-left: 3%;
+    margin: 10px auto;
+    max-height: 200px;
+}
+
+/* footer section */
+footer {
+    margin: 1.5rem;
+    text-align: center;
+  }  
+
+/* different sections */
+.main-project img {
+    justify-content: center;
+    padding-left: 3%;
+    margin: 10px 10px;
+    max-height: 500px;
+    min-height: 500px;
+    min-width: 1200px;
+    max-width: 1200px;
+}
+
+.projects, .main-project{
+    flex: 1 0 100%;
+    padding: 4%;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+.flexbox {  
+    display: flex;
+    min-height: 100%;
+    padding: 2rem;
+      /* outline is like border, but on the outside of the box instead of inside */
+    outline: 2px solid var(--bismark);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out; 
+}
+
+ .flexbox-header {
+   /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+   position: relative;
+   margin: -4rem 0 1.5rem 0;
+   padding: 0.5rem 1rem;
+   background-color: var(--steel-blue);
+   color: var(--steel-blue); 
+}
+
+/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.flexbox:hover,
+.flexbox:hover .flexbox-header {
+  box-shadow: inset 0px 0px 8px var(--steel-blue), 0 0 15px var(--steel-blue);
+  justify-content: center;
+}
+
+.projects img {
+    justify-content: center;
+    padding-left: 3%;
+    margin: 10px 10px;
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.contacts {
+    display: flex;
+    padding: 1rem; 
+    justify-content: space-between;
+}
+
+.contacts ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.contacts ul li {
+    font-size: 20px;
+    padding: 5px 10px;
+ 
+}
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .projects, .main-project {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+}
+
+    /* media query for larger screens */
+@media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .projects, .main-project {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+}  
