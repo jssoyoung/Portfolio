@@ -59,8 +59,8 @@ p {
 }
 
 #about, #contact, #projects {
-    /* min-height: 100%;
-    min-width: 100%; */
+    min-height: 100%;
+    min-width: 100%;
     padding: 1rem;
 }
 
@@ -98,7 +98,6 @@ footer {
 .projects, .main-project{
     flex: 1 0 100%;
     padding: 2%;
-    /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
     font-size: 20px;
@@ -116,7 +115,7 @@ footer {
 
 .flexbox {  
     display: flex;
-    /* min-height: 100%; */
+    min-height: 100%;
     padding: 2rem;
     outline: 2px solid var(--bismark);
     outline-offset: -2px;
@@ -125,7 +124,6 @@ footer {
 }
 
  .flexbox-header {
-   /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
    position: relative;
    margin: -4rem 0 1.5rem 0;
    padding: 0.5rem 1rem;
@@ -167,8 +165,8 @@ footer {
     padding: 5px 10px;
 }
 
+/* media query for tablets */
 @media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
     .projects, .main-project {
       flex: 0 0 50%;
       max-width: 50%;
