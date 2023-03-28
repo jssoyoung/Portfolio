@@ -4,7 +4,7 @@
 
 This website showcases my portfolio. It holds information about myself along with some of the projects that I have worked on. The viewer could use this website to find out more about me and some of the work that I have done. It contains notes on HTML and CSS. 
 Here is the link to the website: https://jssoyoung.github.io/Portfolio/
-Here is an image of the website: ![Portfolio](assets/images/Portfolio-finished.png)
+Here is an image of the website: ![Portfolio](Assets/Images/Portfolio-finished.png)
 
 ## Installation
 
