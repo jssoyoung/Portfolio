@@ -59,8 +59,8 @@ p {
 }
 
 #about, #contact, #projects {
-    min-height: 200px;
-    min-width: 500px;
+    /* min-height: 100%;
+    min-width: 100%; */
     padding: 1rem;
 }
 
@@ -97,7 +97,7 @@ footer {
 
 .projects, .main-project{
     flex: 1 0 100%;
-    padding: 4%;
+    padding: 2%;
     /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
@@ -109,14 +109,19 @@ footer {
     margin-right: -1.5rem;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 .flexbox {  
     display: flex;
-    min-height: 100%;
+    /* min-height: 100%; */
     padding: 2rem;
-      /* outline is like border, but on the outside of the box instead of inside */
     outline: 2px solid var(--bismark);
     outline-offset: -2px;
     transition: all 0.5s ease-in-out; 
+    flex-direction: column;
 }
 
  .flexbox-header {
@@ -128,13 +133,13 @@ footer {
    color: var(--steel-blue); 
 }
 
-/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+/* set an outer and inner drop shadow to create a glowing effect on hover */
 .flexbox:hover,
 .flexbox:hover .flexbox-header {
   box-shadow: inset 0px 0px 8px var(--steel-blue), 0 0 15px var(--steel-blue);
-  justify-content: center;
 }
 
+/* projects section */
 .projects img {
     justify-content: center;
     padding-left: 3%;
@@ -143,25 +148,25 @@ footer {
     max-width: 500px;
 }
 
+/* contacts section */
 .contacts {
     display: flex;
     padding: 1rem; 
     justify-content: space-between;
+
 }
 
 .contacts ul {
     list-style-type: none;
     display: flex;
-    
+    margin: 0 auto;
 }
 
 .contacts ul li {
     font-size: 20px;
     padding: 5px 10px;
- 
 }
 
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
     .projects, .main-project {
